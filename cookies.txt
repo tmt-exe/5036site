@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.team5036.ca	TRUE	/	FALSE	1999999999	__cf_bm	QdRx938sxO4vch1lbwkDtf6d3Th83sKKAabdctWGDZg-1748735249-1.0.1.1-xjzgwHIpVOppoVfe9ItFfJqOHAYpJyp6i3m5h3uNrsk1zQ6cCZDzhJsa8gsrRwDpaZjhlYUCjE44ZbuOLog4Gm8km3k7P8oYNWHG7UWUFa8
+.team5036.ca	TRUE	/	FALSE	1999999999	_cfuvid	YtrsUS6ofr_au83PW.2DfQBSczwQae3zi6Vuj7mtm6M-1748735249369-0.0.1.1-604800000
+team5036.ca	TRUE	/	FALSE	1999999999	SameSite	None
+

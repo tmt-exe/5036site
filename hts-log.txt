@@ -1,0 +1,25 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 31 May 2025 19:45:30 at https://team5036.ca/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://team5036.ca/ -O1 "C:\My Web Sites\team5036-backup" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+19:47:00	Error: 	"Bad Request" (400) at link https://i0.wp.com/team5036.ca/wp-content/uploads/2022/09/cropped-IMG_6310-scaled-1.jpg?fit=2560%2C1382&ssl=1 (from https://team5036.ca/wp-content/uploads/elementor/css/post-167.css?ver=1734646150)
+19:47:00	Error: 	"Bad Request" (400) at link https://i0.wp.com/team5036.ca/wp-content/uploads/2022/09/f895dcc2-ellipse-3-1.png?fit=1463%2C2445&ssl=1 (from https://team5036.ca/wp-content/uploads/elementor/css/post-167.css?ver=1734646150)
+19:47:02	Warning: 	Moved Permanently for https://team5036.ca/?p=441
+19:47:02	Warning: 	File has moved from https://team5036.ca/?p=441 to https://team5036.ca/?page_id=441
+19:47:31	Warning: 	Moved Permanently for https://team5036.ca/?p=211
+19:47:31	Warning: 	File has moved from https://team5036.ca/?p=211 to https://team5036.ca/?page_id=211
+19:47:32	Warning: 	Moved Permanently for https://team5036.ca/?p=869
+19:47:32	Warning: 	File has moved from https://team5036.ca/?p=869 to https://team5036.ca/?page_id=869
+19:47:32	Warning: 	Moved Permanently for https://team5036.ca/?p=340
+19:47:32	Warning: 	File has moved from https://team5036.ca/?p=340 to https://team5036.ca/?page_id=340
+19:47:32	Warning: 	Moved Permanently for https://team5036.ca/?p=209
+19:47:32	Warning: 	File has moved from https://team5036.ca/?p=209 to https://team5036.ca/?page_id=209
+19:47:32	Warning: 	Moved Permanently for https://team5036.ca/?p=206
+19:47:32	Warning: 	File has moved from https://team5036.ca/?p=206 to https://team5036.ca/?page_id=206
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 2 seconds : 205 links scanned, 196 files written (21914529 bytes overall) [16765650 bytes received at 137423 bytes/sec], 7513706 bytes transferred using HTTP compression in 120 files, ratio 28%, 13.7 requests per connection
+(2 errors, 12 warnings, 0 messages)
