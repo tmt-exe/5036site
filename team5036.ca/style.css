@@ -1,0 +1,796 @@
+/* ============================================================
+   Main stylesheet for team5036.ca
+   - Responsive layout for header, sections, and carousel
+   - Font Awesome icons styled for social links
+   - Custom fonts for specific sections
+   ============================================================ */
+
+/* -------------------- Base & Global Styles -------------------- */
+* {
+  font-family: 'Segoe UI', 'Arial', sans-serif !important;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-weight: 500;
+  background: #e6f0fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  min-height: 100vh;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------- Header -------------------- */
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 630px;
+  background: #fff url('images/hpic.jpg') center 10%/cover no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6.3em 2vw 5.3em 0vw;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 2;
+  pointer-events: none;
+}
+.header > * {
+  position: relative;
+  z-index: 3;
+}
+.header-left {
+  flex: 1 1 260px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 1em;
+  padding-left: 2vw;
+}
+.header-title-img {
+  max-width: 650px;
+  width: 100%;
+  margin-bottom: 1em;
+  display: block;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0;
+}
+
+/* -------------------- Social Icons -------------------- */
+.social {
+  display: flex;
+  gap: 20px;
+  font-size: 2.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  justify-content: center;
+  width: 100%;
+}
+.social a {
+  color: #0170B9;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.social a:hover {
+  color: #005a8c;
+}
+.header-right .social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  font-size: 3em;
+  margin-top: 0.7em;
+  margin-bottom: 0;
+  justify-content: center;
+  width: 100%;
+}
+.header-right .social a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.header-right .social a[title="Instagram"] i { color: #f74480; }
+.header-right .social a[title="GitHub"] i { color: #ffffff; }
+.header-right .social a[title="Facebook"] i { color: #1877F3; }
+.header-right .social a[title="YouTube"] i { color: #FF0000; }
+.header-right .social a[title="Twitter"] i { color: #1DA1F2; }
+
+/* -------------------- Header Center & Right -------------------- */
+.header-center {
+  flex: 0 1 500px;
+  min-width: 250px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 60px;
+}
+.header-center h1 {
+  font-size: 2.5em;
+  margin: 0 0 0.5em 0;
+  color: #0170B9;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.header-center p {
+  margin: 0 0 1.2em 0;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #fff;
+  text-align: right;
+  width: 100%;
+}
+.header-center .btn {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-right {
+  flex: 1 1 320px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1em;
+  margin-left: 60px;
+}
+.logo2 {
+  max-width: 480px;
+  width: 100%;
+  margin-bottom: 1em;
+  display: block;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 5s;
+}
+
+/* -------------------- Navigation Menu -------------------- */
+.menu {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 1.2em 4vw 1.2em 4vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #0170B9;
+  box-sizing: border-box;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.6em 1.4em;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.menu a:hover, .menu a.active {
+  background: #fff;
+  color: #0170B9;
+}
+
+/* -------------------- Section Layout -------------------- */
+.section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 2.5em auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 2em 4vw;
+  box-sizing: border-box;
+}
+.section-content {
+  flex: 2 1 350px;
+  min-width: 250px;
+}
+
+/* -------------------- FIRST Section -------------------- */
+.first-section {
+  padding: 6em 6vw 6em 6vw;
+  min-height: 520px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10em;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+}
+.first-bg-video {
+  position: absolute;
+  top: 0; left: 50%;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  filter: brightness(1);
+}
+.first-section > *:not(.first-bg-video) {
+  position: relative;
+  z-index: 1;
+}
+.first-section .section-content {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 2em;
+  transition: box-shadow 0.3s;
+  position: relative;
+  z-index: 2;
+}
+.first-section .section-content:hover {
+  box-shadow: 0 12px 32px 0 rgba(31,38,135,0.25);
+}
+.first-section .first-logo {
+  max-width: none;
+  width: auto;
+  height: auto;
+  max-height: 340px;
+  border-radius: 10px;
+  background: none;
+  margin-right: 3em;
+  filter: drop-shadow(0 4px 24px #62636455);
+  transition: filter 0.3s, transform 0.5s cubic-bezier(.23,1.02,.64,1.01);
+  z-index: 2;
+}
+.first-section .first-logo:hover {
+  filter: drop-shadow(0 8px 32px #0170b9aa);
+  transform: scale(1.06) rotate(-2deg);
+}
+
+/* FIRST Section Heading */
+.first-section .section-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  animation: fadeInUp 1s;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: relative;
+  font-family: 'Special Elite', cursive, sans-serif !important;
+}
+.first-section .section-content h2::before {
+  content: none;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 4px #016fb932);
+  animation: starPop 1.2s;
+}
+
+/* FIRST Section Paragraph (Typing Animation) */
+.first-section .section-content p,
+#first-type-animate {
+  font-family: 'Courier New', Courier, monospace !important;
+  font-weight: 550;
+  word-spacing: -2px;
+  font-size: 1em;
+  line-height: 1.2;
+  width: 100%;
+  min-width: 0;
+  max-width: 1200px;
+  margin: 0;
+  opacity: 0;
+  animation: fadeInText 1.2s 0.5s forwards;
+}
+
+/* Typing Cursor Animation */
+.type-cursor {
+  display: inline-block;
+  width: 1ch;
+  color: #0170B9;
+  font-weight: 600;
+  animation: blink-cursor 1s steps(1) infinite;
+}
+@keyframes blink-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* FIRST Section Animations */
+@keyframes starPop {
+  0% { transform: scale(0.2); opacity: 0; }
+  60% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* FIRST Section Button */
+.first-section .btn {
+  font-size: 1em;
+  padding: 0.6em 1.4em;
+  margin-top: 2em;
+  font-weight: 460;
+  background: #0170B9;
+  border: none;
+  box-shadow: 0 4px 16px #0170b922;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  position: relative;
+  z-index: 2;
+}
+.first-section .btn:hover, .first-section .btn:focus {
+  background: #005a8c;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px #0170b944;
+  color: #fff;
+  outline: none;
+}
+
+/* -------------------- Sponsors Section -------------------- */
+.sponsors-section {
+  background: transparent; /* No gradient, solid white */
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+  border-radius: 18px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding-bottom: 3em;
+}
+.sponsors-section::before {
+  content: "";
+  position: absolute;
+  top: -40px; left: -40px;
+  width: 180px; height: 180px;
+  background: #fff; /* Remove radial-gradient */
+  opacity: 0;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+.sponsors-section::after {
+  content: "";
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 220px; height: 220px;
+  background: #fff; /* Remove radial-gradient */
+  opacity: 0;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+.sponsors-section .section-content {
+  position: relative;
+  z-index: 10;
+  background: rgba(255,255,255,0.7);
+  border-radius: 14px;
+  box-shadow: none;
+  padding: 2em;
+  margin-bottom: 1.5em;
+  transition: box-shadow 0.3s;
+}
+.sponsors-section .section-content h2 {
+  font-size: 1.7em;
+  color: #0170B9;
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: relative;
+}
+.sponsors-section .section-content h2::before {
+  content: "";
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  margin-right: 0.3em;
+  background: url('../i0.wp.com/team5036.ca/wp-content/uploads/2022/05/The_Robo_Devils_Logo8570.png') no-repeat center/contain;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 4px #0170b955);
+  opacity: 0.7;
+}
+.sponsors-section .section-content p {
+  font-size: 1.08em;
+  color: #234;
+  margin-bottom: 1.2em;
+  line-height: 1.5;
+}
+.sponsors-section .btn {
+  font-size: 1em;
+  font-weight: 600;
+  background: #0170B9;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #0170b922;
+  padding: 0.7em 1.6em;
+  margin-top: 1em;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.sponsors-section .btn:hover, .sponsors-section .btn:focus {
+  background: #005a8c;
+  color: #fff;
+  box-shadow: 0 6px 18px #0170b944;
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+/* Sponsors Carousel */
+.sponsors-section .carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+  z-index: 2;
+  margin-top: 1.5em;
+}
+.sponsors-section .carousel {
+  display: flex;
+  gap: 1em;
+  overflow: hidden;
+  width: 640px;
+  max-width: 100%;
+  min-height: 140px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 2px 12px #0170b911;
+  padding: 1em 0;
+}
+.sponsors-section .carousel img {
+  max-width: 300px;
+  min-width: 300px;
+  border-radius: 12px;
+  background: #eee;
+  box-shadow: none; /* Remove glow/shadow */
+  transition: transform 0.4s, box-shadow 0.3s, opacity 0.3s;
+  display: none;
+  opacity: 0.7;
+  filter: grayscale(0.2) brightness(1.08);
+}
+.sponsors-section .carousel img.active {
+  display: block;
+  opacity: 1;
+  transform: scale(1.08);
+  filter: none;
+  box-shadow: none; /* Remove glow/shadow */
+  z-index: 3;
+}
+.sponsors-section .carousel-btn {
+  background: #fff;
+  color: #0170B9;
+  border: 2px solid #0170B9;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px #0170b911;
+  z-index: 4;
+}
+.sponsors-section .carousel-btn:hover {
+  background: #0170B9;
+  color: #fff;
+  border: 2px solid #005a8c;
+  box-shadow: 0 4px 16px #0170b922;
+}
+
+/* -------------------- Contact Section -------------------- */
+.contact-section iframe {
+  margin-left: 2em;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-list li {
+  margin-bottom: 0.7em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.1em;
+}
+
+/* -------------------- General Button Styles -------------------- */
+.btn {
+  display: inline-block;
+  background: #0170B9;
+  color: #fff;
+  padding: 0.6em 1.4em;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0.5em 0;
+  transition: background 0.2s;
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px #0001;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background: #005a8c;
+  color: #fff;
+}
+
+/* -------------------- Footer -------------------- */
+.footer {
+  width: 100%;
+  text-align: center;
+  color: #888;
+  margin-top: 2em;
+  font-size: 1em;
+  border-top: 1px solid #eee;
+  padding: 1.5em 0 1em 0;
+  background: #fff;
+}
+
+/* -------------------- Font Awesome Fixes -------------------- */
+.fab, .fas, .far, .fal, .fa, [class^="fa-"], [class*=" fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome", sans-serif !important;
+  font-weight: 900;
+}
+.fab {
+  font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands", "FontAwesome", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* -------------------- Responsive Design -------------------- */
+@media (max-width: 1000px) {
+  .header, .section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-center,
+  .header-right {
+    margin-left: 0 !important;
+  }
+  .header-center {
+    text-align: left;
+    padding: 0;
+  }
+  .header-right, .header-left, .header-center {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .contact-section iframe {
+    margin-left: 0;
+    margin-top: 1em;
+    width: 100% !important;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em 2vw;
+  }
+  .section {
+    padding: 1.2em 2vw;
+  }
+  .carousel {
+    width: 100%;
+    min-width: 0;
+  }
+  .first-section .first-logo {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+}
+@media (max-width: 1400px) {
+  .options-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+@media (max-width: 1300px) {
+  .option-img {
+    width: 340px;
+    height: 340px;
+  }
+}
+@media (max-width: 1100px) {
+  .option-img {
+    width: 260px;
+    height: 260px;
+  }
+}
+@media (max-width: 900px) {
+  .option-img {
+    width: 180px;
+    height: 180px;
+  }
+  .option-label {
+    display: none !important;
+  }
+}
+
+/* -------------------- Options Section -------------------- */
+.options-section {
+  background: #0170B9;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px #0066b31a;
+  margin: 2em auto;
+  padding: 2em 4vw;
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px; /* Ensure enough height for large images */
+  height: auto;
+}
+.options-section .section-content {
+  width: 100%;
+  text-align: center;
+}
+.options-section h2 {
+  font-size: 1.5em;
+  color: #0066B3;
+  margin-bottom: 1.2em;
+  font-family: 'Special Elite', cursive, sans-serif;
+}
+.options-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.2em;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.5em;
+  overflow-x: visible; /* Remove internal scrolling */
+}
+.options-list .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.1em;
+  padding: 0.7em 1.6em;
+  background: transparent;
+  color: #0066B3;
+  border: 2px solid #0066B3;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0066b311;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.options-list .btn:hover {
+  background: #0066B3;
+  color: transparent;
+  transform: scale(0.01);
+}
+.options-list .btn i {
+  font-size: 1.2em;
+}
+.option-img-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1), box-shadow 0.18s;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+  max-width: none;
+  position: relative;
+}
+.option-img-link:hover, .option-img-link:focus {
+  transform: scale(1.04);
+  box-shadow: none;
+  background: transparent;
+  /* transition is inherited from .option-img-link */
+}
+.option-img {
+  width: 420px;
+  height: 420px;
+  object-fit: contain;
+  border-radius: 18px;
+  margin-bottom: 1.2em;
+  box-shadow: none;
+  background: transparent;
+  transition: box-shadow 0.2s, content 2s cubic-bezier(.4,0,.2,1);
+}
+
+/* Hover image swap for About Us */
+.option-img-link:hover .option-img[alt="About Us"],
+.option-img-link:focus .option-img[alt="About Us"] {
+  content: url('images/abc.png');
+}
+
+/* Hover image swap for Sponsors */
+.option-img-link:hover .option-img[alt="Sponsors"],
+.option-img-link:focus .option-img[alt="Sponsors"] {
+  content: url('images/sponsc.png');
+}
+
+/* Hover image swap for Robots */
+.option-img-link:hover .option-img[alt="Robots"],
+.option-img-link:focus .option-img[alt="Robots"] {
+  content: url('images/robotc.png');
+}
+
+/* -------------------- Options Section Titles -------------------- */
+.option-title {
+  text-align: center;
+  font-size: 1.3em;
+  color: #005a8c;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: none;
+  border: none;
+  padding: 0.1em 0 0.2em 0;
+  box-shadow: none;
+  line-height: 1.1;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Ensure .option-title is not hidden on mobile */
+@media (max-width: 900px) {
+  .option-title {
+    display: block !important;
+    font-size: 1.1em;
+    margin-bottom: 0.4em;
+  }
+  .option-label {
+    display: none !important;
+  }
+}
